@@ -1,0 +1,9 @@
+{
+  "item.mahiro.crutch": "crutch",
+  "itemgroup.mahiro.fight": "mahiro:fight",
+  "item.mahiro.crutch.tips": "An old walking stick left by grandfather. Maybe it has some magical effect? ",
+  "itemgroup.mahiro.material": "mahiro:material",
+  "advancement.mahiro.crutch": "Crutches from grandpa!",
+  "advancement.mahiro.crutch.description": "Get a crutch",
+  "item.mahiro.hardener.tips":"The precious material, obtained through several calcinations,  /r has extremely strong hardness and ductility."
+}
