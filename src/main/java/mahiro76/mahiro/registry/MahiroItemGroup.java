@@ -10,9 +10,9 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class MahiroItemGroup {
-    //武器物品类
+    // 武器物品类
     public static ItemGroup FIGHT = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Mahiro.MOD_ID, "mahiroitemgroup"),
+            new Identifier(Mahiro.MOD_ID, "fight"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.mahiro.fight"))
                     .icon(() -> new ItemStack(MahiroItems.CRUTCH))
@@ -20,9 +20,9 @@ public class MahiroItemGroup {
                         entries.add(MahiroItems.CRUTCH);
                     }).build());
 
-    //材料物品类
+    // 材料物品类
     public static ItemGroup MATERIAL = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Mahiro.MOD_ID,"mahiroitemgroup"),
+            new Identifier(Mahiro.MOD_ID, "material"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.mahiro.material"))
                     .icon(() -> new ItemStack(MahiroItems.HARDENER))
@@ -30,8 +30,8 @@ public class MahiroItemGroup {
                         entries.add(MahiroItems.HARDENER);
                     }).build());
 
-    //启动初始化方法
+    // 启动初始化方法
     public static void registerModItemGroup() {
-        Mahiro.LOGGER.debug("registerModItemGroup" + Mahiro.MOD_ID);
+        Mahiro.LOGGER.debug("registerModItemGroup " + Mahiro.MOD_ID);
     }
 }
