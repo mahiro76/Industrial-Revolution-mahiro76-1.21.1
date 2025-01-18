@@ -1,53 +1,46 @@
 package mahiro76.mahiro.registry.item;
 
-import mahiro76.mahiro.Mahiro;
+import com.google.common.collect.Multimap;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.UUID;
 
-public class Crutch {
-    private static final Identifier ID = Identifier.of(Mahiro.MOD_ID, "crutch_knockback");
+public class Crutch extends Item {
+    //添加属性
+    private static final UUID KNOCKBACK_MODIFIER_ID = UUID.randomUUID();
+    private static final UUID DAMAGE_MODIFIER_ID = UUID.randomUUID();
 
-    public Crutch(Item.Settings settings) {
-        super(settings.component(DataComponentTypes.ATTRIBUTE_MODIFIERS, modifyAttribute()));
+    public Crutch(Settings settings) {
+        super(settings);
+    }
+    //覆写方法，添加物品属性
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
+        Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getAttributeModifiers(stack, slot);
+        // 如果是主手
+        if (slot == EquipmentSlot.MAINHAND) {
+            // 添加击退属性
+            modifiers.put(EntityAttributes.GENERIC_ATTACK_KNOCKBACK,
+                    new EntityAttributeModifier(KNOCKBACK_MODIFIER_ID, "Weapon modifier", 5.0, EntityAttributeModifier.Operation.ADDITION));
+            // 添加攻击伤害属性
+            modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+                    new EntityAttributeModifier(DAMAGE_MODIFIER_ID, "Weapon modifier", 4.0, EntityAttributeModifier.Operation.ADDITION));
+        }
+        // 返回属性
+        return modifiers;
     }
 
-    // 添加属性，这里必须为静态方法，因为它在完成父类构造前被调用
-    private static EntityAttributeModifier modifyAttribute() {
-        // 物品的所有添加的属性
-        List<EntityAttributeModifier.Entry> entries = List.of(
-                // 击退属性
-                createModifiers(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 5),
-                // 攻击伤害属性
-                createModifiers(EntityAttributes.GENERIC_ATTACK_DAMAGE, 4));
-        // 这里布尔值参数决定了是否显示属性修改的工具提示
-        return new EntityAttributeModifier(entries, true);
-    }
-
-    /**
-     * 创建属性修改组件，主手持有拐杖物品时修改器生效
-     *
-     * @param attribute 要修改的属性
-     * @param value     要给属性增加的值
-     * @return 属性修改组件
-     */
-
-    private static EntityAttributeModifier createModifier(EntityAttribute attribute, double value) {
-        return new EntityAttributeModifier(ID, "modifier", value, EntityAttributeModifier.Operation.ADDITION);
-    }
-
+    //覆写方法，添加物品提示文本
     @Override
-    public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("item.mahiro.crutch.tips"));
     }
-
 }
