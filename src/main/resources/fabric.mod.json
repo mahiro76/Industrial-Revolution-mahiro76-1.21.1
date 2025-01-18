@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
-	"id": "mahiro",
-	"version": "${version}",
-	"name": "mahiro",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"id": "industrial-revolution-mahiro76",
+	"version": "beta-1.0",
+	"name": "IndustrialRevolution-mahiro76-1.21.1",
+	"description": "Industrial Revolution mod written by mahiro76. This mod aims to provide a new industrial system for Minecraft.",
 	"authors": [
-		"misaka13210"
+		"mahiro76"
 	],
 	"contact": {
-		"homepage": "https://github.com/misaka13210/",
-		"sources": "https://github.com/misaka13210/mahiro-1.21.1"
+		"homepage": "https://github.com/mahiro76/",
+		"sources": "https://github.com/mahiro76/IndustrialRevolution-mahiro76-1.21.1"
 	},
 	"license": "MIT",
 	"icon": "assets/icon.png",

@@ -21,6 +21,6 @@ public abstract class MahiroAbstractFurnaceBlockEntityMixin {
     @Inject(method = "createFuelTimeMap",at = @At("TAIL"))
     private static void addFuelItems(CallbackInfoReturnable<Map<Item, Integer>> cir){
         fuelTimes.put(MahiroItems.CRUTCH,300);
-        fuelTimes.put(MahiroItems.HARDENER,100);
+
     }
 }

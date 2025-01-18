@@ -50,7 +50,7 @@ public class MahiroRecipeGenerator extends FabricRecipeProvider {
                 RecipeCategory.MISC,
                 Items.WHITE_CONCRETE_POWDER,
                 0.7f,
-                200)
+                100)
                 .criterion(hasItem(MahiroBlocks.Limestone), RecipeProvider.conditionsFromItem(MahiroBlocks.Limestone))
                 .offerTo(exporter);
         //混凝土配方
@@ -71,6 +71,7 @@ public class MahiroRecipeGenerator extends FabricRecipeProvider {
         offerConcretePowderDyeingMoreRecipe(exporter, Blocks.YELLOW_CONCRETE_POWDER, Items.YELLOW_DYE);
     }
 
+    //混凝土粉末染色更多配方辅助方法
     public static void offerConcretePowderDyeingMoreRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output)
                 .input(input)

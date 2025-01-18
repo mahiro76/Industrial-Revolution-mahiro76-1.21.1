@@ -20,7 +20,7 @@ public class MahiroItemGroup {
                         entries.add(MahiroItems.CRUTCH);
                     }).build());
 
-    //添加材料类
+    //材料物品类
     public static ItemGroup MATERIAL = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Mahiro.MOD_ID,"mahiroitemgroup"),
             FabricItemGroup.builder()
