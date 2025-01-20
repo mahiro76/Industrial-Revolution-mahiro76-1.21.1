@@ -1,9 +1,10 @@
 {
   "item.mahiro.crutch": "拐杖",
-  "itemgroup.mahiro.fight": "六花服:战斗用品",
-  "item.mahiro.crutch.tips": "爷爷留下的一根破旧拐杖。或许有着奇特的效果？",
-  "itemgroup.mahiro.material": "六花服:材料",
+  "item.mahiro.hardener": "硬化剂",
+  "itemgroup.mahiro.fight": "工业革命:战斗用品",
+  "item.mahiro.crutch.tips": "§6爷爷留下的一根破旧拐杖,或许有着奇特的效果？",
+  "itemgroup.mahiro.material": "工业革命:材料",
   "advancement.mahiro.crutch": "爷爷的拐杖",
   "advancement.mahiro.crutch.description": "获得一根拐杖",
-  "item.mahiro.hardener.tips": "经过多次煅烧而得到的珍贵材料./n 具有相当良好的延展性和极强的硬度。"
+  "item.mahiro.hardener.tips": "§6经过多次煅烧而得到的珍贵材料,具有相当良好的延展性和极强的硬度。"
 }
