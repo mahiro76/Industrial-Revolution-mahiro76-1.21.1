@@ -30,6 +30,16 @@ public class MahiroItemGroup {
                         entries.add(MahiroItems.HARDENER);
                     }).build());
 
+    // 自然方块物品类
+    public static ItemGroup NATURAL_BLOCK = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Mahiro.MOD_ID, "natural_block"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.mahiro.natural_block"))
+                    .icon(() -> new ItemStack(MahiroBlocks.Limestone))
+                    .entries((displayContext, entries) -> {
+                        entries.add(MahiroBlocks.Limestone);
+                    }).build());
+
     // 启动初始化方法
     public static void registerModItemGroup() {
         Mahiro.LOGGER.debug("registerModItemGroup " + Mahiro.MOD_ID);
