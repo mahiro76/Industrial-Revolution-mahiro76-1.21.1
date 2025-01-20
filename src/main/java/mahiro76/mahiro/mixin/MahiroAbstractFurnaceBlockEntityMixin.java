@@ -10,16 +10,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Map;
 
-//燃料mixin
 @Mixin(AbstractFurnaceBlockEntity.class)
 public abstract class MahiroAbstractFurnaceBlockEntityMixin {
 
-    //添加燃料时间
-    @Inject(method = "createFuelTimeMap", at = @At("RETURN"), cancellable = true)
-    private static void addFuelItems(CallbackInfoReturnable<Map<Item, Integer>> cir) {
-        Map<Item, Integer> fuelTimes = cir.getReturnValue();
-        //在这里添加物品及其燃料时间（单位：tick）
-        fuelTimes.put(MahiroItems.CRUTCH, 300);
-        cir.setReturnValue(fuelTimes);
+    @Inject(method = "createFuelTimeMap", at = @At("TAIL"), cancellable = true)
+    private static void addFuelItems(CallbackInfoReturnable<Map<Item, Integer>> callbackInfoReturnable) {
+        Map<Item, Integer> map = callbackInfoReturnable.getReturnValue();
+        map.put(MahiroItems.CRUTCH, 300); // 添加物品及其燃料时间（单位：tick）
+        callbackInfoReturnable.setReturnValue(map);
     }
 }
