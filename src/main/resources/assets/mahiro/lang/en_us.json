@@ -6,5 +6,7 @@
   "itemgroup.mahiro.material": "IndustrialRevolution:material",
   "advancement.mahiro.crutch": "Crutches from grandpa!",
   "advancement.mahiro.crutch.description": "Get a crutch",
-  "item.mahiro.hardener.tips":"§6The precious material,obtained through several calcinations,has extremely strong hardness and ductility."
+  "item.mahiro.hardener.tips":"§6The precious material,obtained through several calcinations,has extremely strong hardness and ductility.",
+  "item.mahiro.chocolate":"chocolate",
+  "item.mahiro.chocolate.tips": "§6A chocolate with high calories"
 }

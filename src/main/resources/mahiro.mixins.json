@@ -3,9 +3,12 @@
   "package": "mahiro76.mahiro.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "MahiroMixin",
     "AbstractFurnaceBlockEntityMixin",
-    "EnchantmentHelperMixin"
+    "EnchantmentHelperMixin",
+    "EntityAccessor",
+    "MahiroMixin",
+    "MobEntityAccessor",
+    "WolfEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

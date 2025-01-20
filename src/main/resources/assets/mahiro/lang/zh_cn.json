@@ -6,5 +6,7 @@
   "itemgroup.mahiro.material": "工业革命:材料",
   "advancement.mahiro.crutch": "爷爷的拐杖",
   "advancement.mahiro.crutch.description": "获得一根拐杖",
-  "item.mahiro.hardener.tips": "§6经过多次煅烧而得到的珍贵材料,具有相当良好的延展性和极强的硬度。"
+  "item.mahiro.hardener.tips": "§6经过多次煅烧而得到的珍贵材料,具有相当良好的延展性和极强的硬度。",
+  "item.mahiro.chocolate": "热量巧克力",
+  "item.mahiro.chocolate.tips": "§6一条高热量的巧克力"
 }

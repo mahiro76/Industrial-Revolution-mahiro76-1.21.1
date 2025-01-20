@@ -58,6 +58,7 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.CRUTCH))//暂时使用拐杖作为图标，后续替换
                     .entries((displayContext, entries) -> {
                         //在此处添加物品
+                        entries.add(MahiroItems.CHOCOLATE);
                     }).build());
 
     // 启动初始化方法
