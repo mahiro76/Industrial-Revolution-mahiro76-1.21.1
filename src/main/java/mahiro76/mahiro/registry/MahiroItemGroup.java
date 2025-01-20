@@ -40,6 +40,26 @@ public class MahiroItemGroup {
                         entries.add(MahiroBlocks.Limestone);
                     }).build());
 
+    // 工具物品类
+    public static ItemGroup TOOL = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Mahiro.MOD_ID, "tool"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.mahiro.tool"))
+                    .icon(() -> new ItemStack(MahiroItems.CRUTCH))//暂时使用拐杖作为图标，后续替换
+                    .entries((displayContext, entries) -> {
+                        //在此处添加物品
+                    }).build());
+
+    // 食物物品类
+    public static ItemGroup FOOD = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Mahiro.MOD_ID, "food"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.mahiro.food"))
+                    .icon(() -> new ItemStack(MahiroItems.CRUTCH))//暂时使用拐杖作为图标，后续替换
+                    .entries((displayContext, entries) -> {
+                        //在此处添加物品
+                    }).build());
+
     // 启动初始化方法
     public static void registerModItemGroup() {
         Mahiro.LOGGER.debug("registerModItemGroup " + Mahiro.MOD_ID);

@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Map;
 
 @Mixin(AbstractFurnaceBlockEntity.class)
-public abstract class MahiroAbstractFurnaceBlockEntityMixin {
+public abstract class AbstractFurnaceBlockEntityMixin {
 
     @Inject(method = "createFuelTimeMap", at = @At("TAIL"), cancellable = true)
     private static void addFuelItems(CallbackInfoReturnable<Map<Item, Integer>> callbackInfoReturnable) {
