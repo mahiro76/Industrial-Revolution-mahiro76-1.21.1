@@ -11,6 +11,7 @@ import java.util.List;
 
 public class Chocolate extends Item {
 
+    //食品属性
     public Chocolate(Settings settings) {
         super(settings.food(new FoodComponent.Builder()
                 .hunger(2)
@@ -20,6 +21,7 @@ public class Chocolate extends Item {
                 .alwaysEdible()
                 .build()));
     }
+    //覆写方法，添加物品提示文本
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("item.mahiro.chocolate.tips"));
