@@ -14,8 +14,8 @@ public class Chocolate extends Item {
     //食品属性
     public Chocolate(Settings settings) {
         super(settings.food(new FoodComponent.Builder()
-                .hunger(2)
-                .saturationModifier(0.3f)
+                .hunger(10)
+                .saturationModifier(2.0f)
                 .meat()
                 .snack()
                 .alwaysEdible()

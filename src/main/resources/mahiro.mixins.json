@@ -5,9 +5,7 @@
   "mixins": [
     "AbstractFurnaceBlockEntityMixin",
     "EnchantmentHelperMixin",
-    "EntityAccessor",
     "MahiroMixin",
-    "MobEntityAccessor",
     "WolfEntityMixin"
   ],
   "injectors": {
